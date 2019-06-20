@@ -1,9 +1,11 @@
 ---
-title: About me
+title: About 大盗酱(Koyo)
 ---
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien consequat eleifend.
+I am 大盗酱（Koyo）,
 
-Donec nec dolor erat, condimentum sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc, consequat nec egestas ac, volutpat ac nisi.
+a Chinese living in Tokyo.
 
-Find me on [GitHub](https://github.com/muan) or [Twitter](https://twitter.com/muanchiou).
+This is a place for me to dump words in my mind.
+
+Find me on [Weibo](https://www.weibo.com/jiangspluto/) and [Douban](https://www.douban.com/people/52571667/).
