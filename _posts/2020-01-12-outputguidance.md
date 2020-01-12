@@ -1,6 +1,6 @@
 ---
-Title: 惑而不从师|让学习变成自己的成果《Output大全》
-Date: 2020-1-12 16:18
+title: 惑而不从师|让学习变成自己的成果《Output大全》
+date: 2020-1-12 16:18
 ---
 
 ![img](https://hellomomiji.github.io/media/title-img/output.jpeg)
