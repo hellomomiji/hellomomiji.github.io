@@ -1,4 +1,4 @@
-baseURL = "https://hellomomiji.github.io/momiji-perspectives/"
+baseURL = ""
 theme = "anubis2"
 title = "Momiji Perspectives"
 defaultContentLanguage = 'en'
@@ -118,6 +118,13 @@ weight = 4
 category = "categories"
 tag = "tags"
 
+[[module.mounts]]
+source = 'static'
+target = 'static'
+
+[[module.mounts]]
+source = 'assets'
+target = 'static/assets'
 
 [markup.goldmark.renderer]
 unsafe = true # true | false; Enable unsafe mode to have a better experience

@@ -5,7 +5,7 @@ draft: false
 categories: ['reading']
 tags: ['reading', 'friendship', 'relationship']
 ---
-![cover](/assets/postimg/friend-fantasy/cover.jpeg)
+![cover](/images/friend-fantasy/cover.jpeg)
 
 这本书被各个日本各个综艺节目推荐，且被誉为是中学高中老师最想推荐给学生阅读的书籍之一。日本社会的人际关系令人抑郁，这本书主要以学校为例子分析解释了很多令人产生沟通和交际压力的原因是什么。
 
@@ -19,7 +19,7 @@ tags: ['reading', 'friendship', 'relationship']
 2. 与他人产生关系本身就是目的。相处愉快，志同道合的朋友，亲子等家人关系等，都是这种超越了利益关系得失的关系。
 当然，这两种关系并不是相斥的，现实生活中大部分关系都是这两者相重合的。然而在本书中，为了研究人际关系的本质，需要将人际关系从概念上区分成这两种。
 
-![1](../../assets/img/postimg/friend-fantasy/1.png)
+![1](/images/friend-fantasy/1.png)
 
 ## 一个人可以生活，但一个人是虚无
 
@@ -49,7 +49,7 @@ tags: ['reading', 'friendship', 'relationship']
 
 它如果能与前述的“自我充实”一起实现，也就是在自己适得其所的地方做着得心应手的工作，并且获得他者或是社会普遍认知的较高评价，这种情况可以说是最令人愉悦，让人幸福度最高的时刻。
 
-![2](../../assets/img/postimg/friend-fantasy/2.png)
+![2](/images/friend-fantasy/2.png)
 
 ## “他者”—“除自己以外的人”
 
@@ -77,7 +77,7 @@ tags: ['reading', 'friendship', 'relationship']
 
 如果这种想法变得极端了，就会变成具有跟踪狂性质的偏执的人。**跟踪狂的思维模式就是不能够接受对方的“他者性”（也就是对方是他者这个事实，或是这个本质），将对方成为了自己想法和情绪感受投影的道具。**
 
-![3](../../assets/img/postimg/friend-fantasy/3.png)
+![3](/images/friend-fantasy/3.png)
 
 ## 规则关系和共情关系
 
@@ -95,7 +95,7 @@ tags: ['reading', 'friendship', 'relationship']
 
 然而，很多人都忽视了，要建立共情关系，是需要有规则关系的基础的。在没有考虑”规则“的情况下，不断强调”我们要保持关系和谐融洽“，这会让人更加痛苦，以上面的学校为例的话，这种”我必须要保持关系融洽，不能不合群“的想法，也是学校霸凌发生的诱因。
 
-![4](../../assets/img/postimg/friend-fantasy/4.jpeg)
+![4](/images/friend-fantasy/4.jpeg)
 
 ## 从同质性到共存性，从共情到”他者“意识
 
@@ -105,7 +105,7 @@ tags: ['reading', 'friendship', 'relationship']
 
 - （虽然很多老师只能看到表象”这几个同学关系真融洽呢“，却不知这是更大的全体组织的良好关系的崩坏的前兆，而且这个封闭团体里也许也存在为了不显得不合群避免被欺凌而逼迫自己融入这个圈子里的个体。）
 - 
-![5](../../assets/img/postimg/friend-fantasy/5.jpeg)
+![5](/images/friend-fantasy/5.jpeg)
 
 然而从学校毕业走向社会之后，你不得不去接触和你不是同个年代的，抱有截然不同世界观的，不同出身不同背景以及不同国籍的人。这时候，如果只跟与自己“共情”的人交往的话，只能是把自己逼上绝境。因此，较早地意识到他人的“他者性”和“异质性”，对于维系“社会性关系”来说，是非常必要的。
 
