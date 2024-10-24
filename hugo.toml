@@ -1,0 +1,126 @@
+baseURL = "http://localhost:1313/"
+theme = "anubis2"
+title = "Momiji Perspectives"
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[pagination]
+pagerSize = 5
+
+[params.author]
+name = "Momiji"
+location = "United States"
+
+[languages]
+  [languages.en]
+  languageName = "English"
+  [languages.ja]
+  languageName = "日本語"
+    [languages.ja.params]
+    languageCode = "ja"
+  [languages.zh]
+  languageName = "中文"
+    [languages.zh.params]
+    languageCode = "zh-cn"
+
+[params]
+description = "This is a synchronous blog for my articles that have been released on my WeChat public account (dadaowalking)."
+paginationSinglePost = true
+colorTheme = "auto"
+colorThemeSwitcher = true
+readMore = false
+readNextPosts = 2
+copyCodeButton = true
+rssAsSocialIcon = true
+locale = "en-us"
+math = false # true: enable mathjax globally (default is false)
+toc = true
+
+social = [
+    { id = "github", url = "https://github.com/hellomomiji" },
+    { id = "linkedin", url = "https://www.linkedin.com/in/yang-jiang-koyo" },
+    { id = "instagram", url = "https://www.instagram.com/jiangspluto/" }
+]
+
+[[menu.main]]
+identifier = "home"
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "about"
+name = "About"
+url = "/about/"
+weight = 2
+
+[[menu.main]]
+identifier = "tags"
+name = "Tags"
+url = "/tags/"
+weight = 3
+
+[[menu.main]]
+name = "Archive"
+identifier = "archive"
+url = "/posts/"
+weight = 4
+
+[[languages.zh.menu.main]]
+identifier = "home"
+name = "首页"
+url = "/"
+weight = 1
+
+[[languages.zh.menu.main]]
+identifier = "about"
+name = "关于"
+url = "/about/"
+weight = 2
+
+[[languages.zh.menu.main]]
+identifier = "tags"
+name = "标签"
+url = "/tags/"
+weight = 3
+
+[[languages.zh.menu.main]]
+identifier = "archive"
+name = "归档"
+url = "/posts/"
+weight = 4
+
+[[languages.ja.menu.main]]
+identifier = "home"
+name = "ホーム"
+url = "/"
+weight = 1
+
+[[languages.ja.menu.main]]
+identifier = "about"
+name = "Momijiについて"
+url = "/about/"
+weight = 2
+
+[[languages.ja.menu.main]]
+identifier = "tags"
+name = "タグ"
+url = "/tags/"
+weight = 3
+
+[[languages.ja.menu.main]]
+identifier = "archive"
+name = "アーカイブ"
+url = "/posts/"
+weight = 4
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+
+[markup.goldmark.renderer]
+unsafe = true # true | false; Enable unsafe mode to have a better experience
+
+[markup.highlight]
+style = 'base16-snazzy' # Highlight.js style
