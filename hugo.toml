@@ -1,8 +1,9 @@
-baseURL = ""
+baseURL = "/momiji-perspectives"
 theme = "anubis2"
 title = "Momiji Perspectives"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
+summaryLength = 2
 
 [pagination]
 pagerSize = 5
