@@ -25,7 +25,9 @@ location = "United States"
     languageCode = "zh-cn"
 
 [params]
-description = "This is a synchronous blog for my articles that have been released on my WeChat public account (dadaowalking)."
+description = "Momiji Perspectives is a personal blog featuring insightful articles on Japanese culture, reading, movies, and languages, originally published on the WeChat public account dadaowalking."
+keywords = ["Momiji Perspectives", "Japanese", "Japan", "culture", "reading", "movie", "personal blog", "language", "WeChat", "dadaowalking", "United States", "English ", "日本語", "ブログ", "中文", "博客"]
+enableRobotsTXT = true
 paginationSinglePost = true
 colorTheme = "auto"
 colorThemeSwitcher = true
@@ -36,6 +38,13 @@ rssAsSocialIcon = true
 locale = "en-us"
 math = false # true: enable mathjax globally (default is false)
 toc = true
+
+GiscusRepo = "hellomomiji/hellomomiji.github.io"
+GiscusRepoId = "R_kgDONFgp4A"
+GiscusCategory = "General"
+GiscusCategoryId = "DIC_kwDONFgp4M4CjsnK"
+GiscusLazyLoad = false
+GiscusDataMapping = "pathname"
 
 social = [
     { id = "github", url = "https://github.com/hellomomiji" },
@@ -151,9 +160,7 @@ unsafe = true # true | false; Enable unsafe mode to have a better experience
 [markup.highlight]
 style = 'base16-snazzy' # Highlight.js style
 
-GiscusRepo = "hellomomiji/hellomomiji.github.io"
-GiscusRepoId = "R_kgDONFgp4A"
-GiscusCategory = "General"
-GiscusCategoryId = "DIC_kwDONFgp4M4CjsnK"
-GiscusLazyLoad = false
-GiscusDataMapping = "pathname"
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

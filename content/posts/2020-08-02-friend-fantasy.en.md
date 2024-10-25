@@ -1,6 +1,7 @@
 ---
 title: \"Friend Fantasy\" | Are Human Relationships Suffocating? Both Happiness and Pain Come from Others
 date: 2020-08-02
+description: Friend Fantasy has been recommended by various Japanese variety shows and is considered one of the books that middle and high school teachers most want to recommend to their students. Human relationships in Japanese society can be depressing, and this book primarily uses schools as examples to analyze and explain many of the causes that create pressure in communication and social interaction.
 draft: false
 author: "Momiji"
 categories: ['reading']

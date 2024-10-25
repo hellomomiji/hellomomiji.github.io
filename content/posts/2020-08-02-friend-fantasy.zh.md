@@ -2,6 +2,7 @@
 title: 《朋友幻想》| 人际关系令人窒息？幸福和苦痛都来源于他人
 date: 2020-08-02
 draft: false
+description: 这本书被各个日本各个综艺节目推荐，且被誉为是中学高中老师最想推荐给学生阅读的书籍之一。日本社会的人际关系令人抑郁，这本书主要以学校为例子分析解释了很多令人产生沟通和交际压力的原因是什么。
 author: "Momiji"
 categories: ['reading']
 tags: ['reading', 'friendship', 'relationship']

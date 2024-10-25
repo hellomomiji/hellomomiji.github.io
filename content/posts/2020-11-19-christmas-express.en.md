@@ -1,6 +1,7 @@
 ---
 title: Christmas Express | A Showa Era Christmas Eve Shinkansen Romance Story Without Mobile Phones
 date: 2020-12-06
+description: The Christmas Express series of advertisements can be said to be a classic case in the advertising industry that is worth learning from. Takehiko Miura, the planner who created this series of advertisements, and director Kazuyoshi Hayakawa created a series of advertisements with similar styles from the late 1980s to the mid-1990s. The biggest feature of these advertisements is that they depict heartwarming stories centered on people's daily lives, or simply put, "story-based advertising".
 draft: false
 categories: ["culture"]
 tags: ["culture", "Japan", "Christmas"]
