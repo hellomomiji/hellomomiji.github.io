@@ -11,8 +11,6 @@ author: "Momiji"
 
 要写得好，就要像普通人一样表达，像智者一样思考。
 
-Disclaimer: The content of this website reflects my personal opinions and does not represent the views of my employer or any organization I am affiliated with. Most articles are initially written in Chinese and then translated into Japanese and English using language model tools.
+声明：这里所有内容仅代表我个人的观点，不代表我的雇主或任何组织的立场。大多数文章最初是用中文写的，然后借助大型语言模型工具翻译成日语和英语，再由我自己进行修改。
 
-声明：本网站内容为个人观点，不代表我的雇主或所属组织的观点。 大多数文章最初是用中文写的，然后使用语言模型工具翻译成日语和英语。
-
-ディスクレイマー：このウェブサイトの内容は私個人の意見であり、私の雇用主または所属する組織の見解を代表するものではありません。 ほとんどの記事は最初に中国語で書かれ、LLMツールを使用して日本語と英語に翻訳されます。
+想了解我是如何自动化使用大型语言模型工具来辅助翻译的吗？请查看我在[GitHub](https://github.com/hellomomiji/hellomomiji.github.io/tree/main/scripts)上的脚本。

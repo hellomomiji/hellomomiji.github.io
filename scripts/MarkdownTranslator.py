@@ -119,7 +119,7 @@ def main():
         # Split translations into separate files
         translations = translator.split_translations(translations_text, args.target)
 
-        logger.info(f"Translations: {translations}")
+        logger.info(f"Translations: {translations.get('English', 'No translations found'), translations.get('Japanese', 'No translations found')}")
         # Write translations to files
         input_filename = Path(args.input_file).stem.split('.')[0]  # Remove any existing language suffix
         logger.info(f"Writing translations to files...{input_filename}")
