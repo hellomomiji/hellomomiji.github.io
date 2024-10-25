@@ -2,6 +2,7 @@
 title: 《朋友幻想》| 人际关系令人窒息？幸福和苦痛都来源于他人
 date: 2020-08-02
 draft: false
+author: "Momiji"
 categories: ['reading']
 tags: ['reading', 'friendship', 'relationship']
 ---

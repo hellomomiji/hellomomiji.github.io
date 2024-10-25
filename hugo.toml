@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "/"
 theme = "anubis2"
 title = "Momiji Perspectives"
 defaultContentLanguage = 'en'
@@ -121,7 +121,7 @@ tag = "tags"
 
 [[module.mounts]]
 source = 'static'
-target = 'static/momiji-perspectives'
+target = 'static'
 
 [[module.mounts]]
 source = 'assets'
