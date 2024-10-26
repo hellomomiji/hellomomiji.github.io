@@ -110,7 +110,7 @@ weight = 4
 identifier = "archive"
 name = "归档"
 url = "/posts/"
-weight = 4
+weight = 5
 
 [[languages.ja.menu.main]]
 identifier = "home"
