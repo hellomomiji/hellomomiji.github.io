@@ -5,19 +5,57 @@
 <meta name="referrer" content="no-referrer-when-downgrade">
 
 {{ partial "title.html" . }}
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}">
+<!-- Description -->
+<meta name="description" content="{{ .Params.description }}" />
+<meta itemprop="description" content="{{ .Params.description }}" />
+<meta property="og:description" content="{{ .Params.description }}" />
+<meta name="twitter:description" content="{{ .Params.description }}" />
+
+<!-- Link -->
+<base href="{{ .Permalink }}" />
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
+<meta name="url" content="{{ .Permalink }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+<!-- Language -->
+<meta property="og:locale" content="{{ .Language.Lang }}" />
+<meta name="language" content="{{ .Language.LanguageName }}" />
+{{ range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}" />
+{{ end }}
+
+<!-- Image -->
+{{ with .Params.image }}
+<meta itemprop="image" content="{{ . | absURL }}" />
+<meta property="og:image" content="{{ . | absURL }}" />
+<meta name="twitter:image" content="{{ . | absURL }}" />
+<meta name="twitter:image:src" content="{{ . | absURL }}" />
+{{ else }}
+<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+<meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+{{ end }}
+
+<!-- Date -->
+<meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
 {{ with .Keywords }}
     <meta name="keywords" content="{{ range $i, $e := . }}{{ if $i }},{{ end }}{{ $e }}{{ end }}">
 {{ end }}
 
-{{ if and (.IsPage) (eq .Params.hidden true)}}
-<meta name="robots" content="noindex" />
-{{ end }}
+<!-- Search Engine Cralwer -->
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
 
-{{ with .OutputFormats.Get "rss" -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
-{{ end -}}
+<!-- sitemap & RSS -->
+<link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
+
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
 
 {{ partial "favicons.html" . }}
 

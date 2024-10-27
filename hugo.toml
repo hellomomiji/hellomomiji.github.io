@@ -3,31 +3,17 @@ theme = "anubis2"
 title = "Momiji Perspectives"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
-enableRobotsTXT = true
 summaryLength = 2
 
-[pagination]
-pagerSize = 5
-
-[params.author]
-name = "Momiji"
-location = "United States"
-
-[languages]
-  [languages.en]
-  languageName = "English"
-  [languages.ja]
-  languageName = "日本語"
-    [languages.ja.params]
-    languageCode = "ja"
-  [languages.zh]
-  languageName = "中文"
-    [languages.zh.params]
-    languageCode = "zh-cn"
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
 
 [params]
 description = "Momiji Perspectives is a personal blog featuring insightful articles on Japanese culture, reading, movies, and languages, originally published on the WeChat public account dadaowalking."
 keywords = ["Momiji Perspectives", "Japanese", "Japan", "culture", "reading", "movie", "personal blog", "language", "WeChat", "dadaowalking", "United States", "English ", "日本語", "ブログ", "中文", "博客"]
+sitename = "Momiji Perspectives"
 enableRobotsTXT = true
 paginationSinglePost = true
 colorTheme = "auto"
@@ -39,6 +25,32 @@ rssAsSocialIcon = true
 locale = "en-us"
 math = false # true: enable mathjax globally (default is false)
 toc = true
+
+
+[pagination]
+pagerSize = 5
+
+[params.author]
+name = "Momiji"
+location = "United States"
+
+[languages]
+  [languages.en]
+  languageName = "English"
+    [languages.en.params]
+    languageCode = "en-us"
+    weight = 1
+  [languages.zh]
+  languageName = "中文"
+    [languages.zh.params]
+    languageCode = "zh-cn"
+    weight = 2
+  [languages.ja]
+  languageName = "日本語"
+    [languages.ja.params]
+    languageCode = "ja"
+    weight = 3
+
 
 GiscusRepo = "hellomomiji/hellomomiji.github.io"
 GiscusRepoId = "R_kgDONFgp4A"
