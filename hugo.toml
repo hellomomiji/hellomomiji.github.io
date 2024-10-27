@@ -177,3 +177,10 @@ style = 'base16-snazzy' # Highlight.js style
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
+[params.UmamiAnalytics]
+enabled = true
+dnt = false
+id = "7b5d07a5-1394-4a17-a904-f682fe1b558d"                                            # Website ID
+datacache = false
+url = "https://cloud.umami.is/script.js"
