@@ -1,8 +1,9 @@
-baseURL = "/"
+baseURL = "https://hellomomiji.github.io/"
 theme = "anubis2"
 title = "Momiji Perspectives"
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = true
+enableRobotsTXT = true
 summaryLength = 2
 
 [pagination]
