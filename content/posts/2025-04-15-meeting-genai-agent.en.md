@@ -13,20 +13,23 @@ categories: ["Technology"]
 tags: ["genai", "agent", "AI", "LLM", "Gemini", "generativeai", "google", "kaggle", "langraph", "langchain"]
 
 ---
+
+
 # Building a Multilingual Meeting Assistant with LangGraph and Generative AI
 
 In today's fast-paced business environment, effective meeting management has become more crucial than ever. With the rise of global teams and remote work, meetings often involve participants from different regions speaking various languages. This creates a need for tools that can not only summarize discussions but also make them accessible across language barriers.
 
 In this article, I'll walk through how I built a smart meeting assistant using LangGraph and Google's Gemini model that can:
-
 - Extract key information from meeting transcripts
 - Identify and organize action items with assignees
 - Translate summaries into multiple languages
 - Structure everything into a clean, organized format
 
+
 Kaggle Notebook: [Kaggle Notebook](https://www.kaggle.com/code/hellomomiji/capstone-project-gen-ai-intensive-course-2025q1)
 
 Github: [Github Repository](https://github.com/hellomomiji/multilingual-meeting-genai-agent)
+
 
 ## Gen AI Capabilities Demonstrated
 
@@ -44,7 +47,7 @@ This project showcases several advanced generative AI capabilities:
 
 ## The Problem: Information Loss in Multilingual Meetings
 
-Meeting notes are often inconsistent, action items get lost, and language barriers create additional challenges. Consider this scenario: a product team with members from the US, China, and Japan meets to discuss a product launch. While the transcript captures everything, extracting actionable insights efficiently requires significant manual effort.
+Consider this scenario: A global executive team with members from the US, China, and Japan meets to discuss their Q2 strategy. The VP from China reports warehousing delays in Eastern China, while the Japan team mentions shipping delays and user support challenges. Even with live interpretation during the meeting, extracting actionable insights efficiently from the transcript later requires significant manual effort.
 
 Current solutions often focus on just transcription or basic summarization, missing the crucial step of organizing action items and making content accessible across languages.
 
@@ -80,12 +83,7 @@ workflow.add_conditional_edges(
         "end": END
     }
 )
-
-workflow.add_edge("translate_content", END)
-
 ```
-
-The visualized directed graph:
 
 ![graph](/images/meeting-genai-agent/graph.png)
 
@@ -199,75 +197,50 @@ def extract_action_items_tool(transcript: str) -> Dict:
 
 When tested with a sample multilingual transcript (featuring English, Chinese, and Japanese), the system successfully:
 
-1. Identified the meeting topic: "Q2 Product Launch Planning Meeting"
+1. Identified the meeting topic: "Q2 Global Strategy Executive Meeting"
 2. Generated a concise summary capturing the key discussion points
-3. Extracted five key points highlighting the most important information
-4. Identified five specific action items with assignees and deadlines where mentioned
-5. Translated all content into Chinese and Japanese while preserving the original formatting and structure
+3. Extracted key points highlighting operational strains in Asia, warehousing delays in China, shipping delays in Japan, and staffing needs
+4. Identified specific action items with assignees and deadlines
+5. Translated all content into requested languages while preserving the original formatting and structure
 
 Here's a snippet of the output:
 
 ```
-==================================================
-MEETING TITLE: Q2 Product Launch Planning Meeting
-==================================================
+MEETING TITLE: Q2 Global Strategy Executive Meeting
 
 SUMMARY:
-The team discussed the progress of the Q2 product launch, including backend integration, UI mockups, and analytics platform selection. Action items were assigned for landing page content in English, Chinese, and Japanese, as well as testing Firebase and Mixpanel.
+The Q2 Global Strategy Executive Meeting addressed operational strains in Asia, particularly warehousing delays and system integration issues in China, as well as shipping delays and user support challenges in Japan. The meeting concluded with action items assigned to each regional team, focusing on logistics improvement, partnership finalization, support staffing, and AI prototype performance.
 
 KEY POINTS:
-1. Backend integration is complete and ready for final QA
-2. Design team to submit final UI mockups by next week
-3. Firebase and Mixpanel to be tested in staging by Thursday
-4. Landing page content updates needed in English, Chinese, and Japanese
-5. Final review meeting scheduled for next Monday at 10 AM Pacific
+1. Eastern China experiencing warehousing delays and needs logistics system upgrade due to new supplier software incompatibility.
+2. Marketing rollout in Southeast Asia delayed due to translation quality; localization needs improvement.
+3. Japan market sees positive feedback on new product line, but faces shipping delays and insufficient user support infrastructure.
+4. R&D completed AI personalization prototype, but performance issues need to be resolved before demoing to the board.
+5. China team is negotiating partnerships with two major e-commerce platforms and considering a new distribution center in Shenzhen.
 
 ACTION ITEMS:
-1. Coordinate with marketing for English content (Assigned to: John, Due: None)
-2. Handle Chinese version of the landing page content (Assigned to: Li Wei, Due: None)
-3. Take care of the Japanese translation (Assigned to: Yuki, Due: None)
-4. Test Firebase and Mixpanel on staging (Assigned to: Yuki & Li Wei, Due: Thursday)
-5. Finalize UI mockups (Assigned to: Design team, Due: Next week)
+1. Prepare a roadmap for cross-regional logistics improvement (Assigned to: US Team, Due: In two weeks)
+2. Outline integration resource needs (Assigned to: China Team, Due: In two weeks)
+3. Finalize e-commerce partnerships (Assigned to: China Team)
+4. Submit support staffing plan (Assigned to: Japan Team, Due: In two weeks)
+5. Submit performance benchmarks for the AI prototype (Assigned to: Japan Team, Due: In two weeks)
+```
 
-==================================================
-TRANSLATIONS
-==================================================
+The system also successfully created translations in Chinese, Japanese, and other requested languages, preserving the structure and detailed information:
 
+```
 --- Chinese ---
-TITLE: 第二季度产品发布计划会议
-SUMMARY: 团队讨论了第二季度产品发布的进展，包括后端集成、UI 模型以及分析平台选择。行动事项已分配，包括英文、中文和日文的着陆页内容，以及测试 Firebase 和 Mixpanel。
+TITLE: 第二季度全球战略执行会议
+SUMMARY: 第二季度全球战略执行会议讨论了亚洲地区的运营压力，特别是中国的仓储延误和系统集成问题，以及日本的运输延误和用户支持挑战。会议结束时，为每个区域团队分配了行动项目，重点关注物流改进、合作伙伴关系最终确定、支持人员配置和人工智能原型性能。
 
 KEY POINTS:
-1. 后端集成已完成，准备进行最终的质量保证 (QA)
-2. 设计团队将于下周提交最终 UI 模型
-3. Firebase 和 Mixpanel 将于周四在暂存环境中进行测试
-4. 需要更新英文、中文和日文的着陆页内容
-5. 最终审核会议安排在下周一太平洋时间上午 10 点
-
-ACTION ITEMS:
-1. 与市场部协调英文内容 (Assigned to: John, Due: None)
-2. 处理着陆页内容的中文版本 (Assigned to: Li Wei, Due: None)
-3. 负责日语翻译 (Assigned to: Yuki, Due: None)
-4. 在暂存环境中测试 Firebase 和 Mixpanel (Assigned to: Yuki & Li Wei, Due: Thursday)
-5. 最终确定 UI 模型 (Assigned to: Design team, Due: Next week)
+1. 华东地区正经历仓储延误，由于新的供应商软件不兼容，需要进行物流系统升级。
+...
 
 --- Japanese ---
-TITLE: 第2四半期製品ローンチ計画会議
-SUMMARY: チームは、第2四半期の製品ローンチの進捗状況について議論しました。これには、バックエンド統合、UIモックアップ、および分析プラットフォームの選定が含まれます。ランディングページのコンテンツ（英語、中国語、日本語）、およびFirebaseとMixpanelのテストに関するアクションアイテムが割り当てられました。
-
-KEY POINTS:
-1. バックエンド統合は完了し、最終QAの準備が完了しました
-2. デザインチームは、来週までに最終UIモックアップを提出します
-3. FirebaseとMixpanelは、木曜日までにステージング環境でテストされます
-4. ランディングページのコンテンツ更新が英語、中国語、日本語で必要です
-5. 最終レビュー会議は、太平洋時間で来週月曜日の午前10時に予定されています
-
-ACTION ITEMS:
-1. 英語コンテンツについてマーケティングと連携 (Assigned to: John, Due: None)
-2. ランディングページの中国語版コンテンツを担当 (Assigned to: Li Wei, Due: None)
-3. 日本語訳を担当 (Assigned to: Yuki, Due: None)
-4. ステージング環境でFirebaseとMixpanelをテスト (Assigned to: Yuki & Li Wei, Due: Thursday)
-5. UIモックアップを最終決定 (Assigned to: Design team, Due: Next week)
+TITLE: 第2四半期グローバル戦略エグゼクティブ会議
+SUMMARY: 第2四半期グローバル戦略エグゼクティブ会議では、アジアにおける業務上の負担、特に中国における倉庫の遅延とシステム統合の問題、および日本における出荷の遅延とユーザーサポートの課題について議論されました。会議は、ロジスティクスの改善、パートナーシップの最終決定、サポート要員の増強、およびAIプロトタイプのパフォーマンスに焦点を当て、各地域チームに割り当てられたアクションアイテムで締めくくられました。
+...
 ```
 
 ## Limitations and Future Improvements
